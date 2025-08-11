@@ -1,14 +1,15 @@
 <template>
-  <div data-scroll-container>
-    <div data-scroll-section>
-        <h1 data-scroll>Hey</h1>
-        <p data-scroll>👋</p>
-    </div>
-    <div data-scroll-section>
-        <h2 data-scroll data-scroll-speed="1">What's up?</h2>
-        <p data-scroll data-scroll-speed="2">😬</p>
-    </div>
-</div>
+  <div class="grid grid-cols-4 gap-4">
+    <div>01</div>
+    <div>02</div>
+    <div>03</div>
+    <div>04</div>
+    <div>05</div>
+    <div>06</div>
+    <div>07</div>
+    <div>08</div>
+    <div>09</div>
+  </div>
 </template>
 
 <style>
