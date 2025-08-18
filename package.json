@@ -12,10 +12,26 @@
   "dependencies": {
     "@nuxt/eslint": "^1.7.1",
     "@nuxtjs/tailwindcss": "^6.14.0",
+    "@vueuse/core": "^13.7.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
     "eslint": "^9.32.0",
     "locomotive-scroll": "^5.0.0-beta.21",
+    "lucide-vue-next": "^0.539.0",
     "nuxt": "^3.10.0",
+    "reka-ui": "^2.4.1",
+    "tailwind-merge": "^3.3.1",
+    "tailwindcss-animate": "^1.0.7",
     "vue": "^3.5.18",
     "vue-router": "^4.5.1"
+  },
+  "devDependencies": {
+    "@iconify-json/radix-icons": "^1.2.4",
+    "@iconify/vue": "^5.0.0",
+    "@nuxtjs/color-mode": "^3.5.2",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "shadcn-nuxt": "^2.2.0",
+    "tailwindcss": "^3.4.17"
   }
 }

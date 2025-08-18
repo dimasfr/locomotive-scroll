@@ -1,18 +1,13 @@
-// plugins/locomotive.client.ts
-import LocomotiveScroll from 'locomotive-scroll'
 import { defineNuxtPlugin } from '#app'
+import LocomotiveScroll from 'locomotive-scroll'
 
-export default defineNuxtPlugin(() => {
-  if (import.meta.client) {
-    window.addEventListener('load', () => {
-      const scrollContainer = document.querySelector('[data-scroll-container]') as HTMLElement
+export default defineNuxtPlugin((nuxtApp) => {
+  const locomotive = new LocomotiveScroll({
+    el: document.querySelector('[data-scroll-container]') as HTMLElement,
+    smooth: true,
+    multiplier: 1,
+  })
 
-      if (scrollContainer) {
-        new LocomotiveScroll({
-          el: scrollContainer,
-          smooth: true,
-        })
-      }
-    })
-  }
+  // supaya bisa diakses di komponen
+  nuxtApp.provide('locomotive', locomotive)
 })
