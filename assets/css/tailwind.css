@@ -66,3 +66,11 @@
     @apply bg-background text-foreground;
   }
 }
+
+.dark-custom {
+  @apply bg-white text-slate-900 border-slate-300 text-blue-600 dark:bg-slate-950 dark:text-slate-100 dark:border-slate-700 dark:text-blue-400 transition-colors duration-300;
+}
+
+.blur-custom {
+  @apply bg-white/90 text-slate-900 border-slate-300 text-blue-600 dark:bg-slate-900/90 dark:text-slate-100 dark:border-slate-700 dark:text-blue-400 shadow-md;
+}

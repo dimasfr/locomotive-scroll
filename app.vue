@@ -6,7 +6,7 @@
     <section 
       class="container mx-auto px-4 py-16 text-center 
       bg-white text-gray-900 
-      dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+      dark:bg-black dark:text-gray-100 transition-colors duration-300">
       
       <h2 class="text-4xl font-bold mb-4">
         Hi, I'm <span class="text-blue-500 dark:text-blue-400">Dimas Fajar Ramadhan</span>
@@ -27,14 +27,14 @@
       data-scroll-section 
       class="py-16 px-32
       bg-gray-100 text-gray-900 
-      dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+      dark:bg-gray-800 dark:text-gray-100 transition-colors duration-300">
       <AboutSection />
     </section>
 
     <section 
       id="experience" 
       data-scroll-section 
-      class="container mx-auto px-32">
+      class="container mx-auto px-32 dark-custom">
       <ExperienceTimeline />
     </section>
 

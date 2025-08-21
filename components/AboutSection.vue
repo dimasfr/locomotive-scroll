@@ -5,7 +5,11 @@
       <!-- Left: Info -->
       <div>
         <h2 class="text-3xl font-bold mb-4">I'm a creative Web Developer</h2>
-        <p class="text-gray-800 mb-6 leading-relaxed">
+        <p 
+          class="mb-6 leading-relaxed
+          bg-gray-100 text-gray-900 
+          dark:bg-gray-800 dark:text-gray-100 transition-colors duration-300
+          ">
           With a strong foundation in both front-end and back-end technologies, I thrive
           on turning ideas into reality. My journey began by diving into the world of coding,
           and over the years, I've honed my skills in languages like JavaScript, PHP, and Python.
@@ -14,39 +18,40 @@
         </p>
 
         <!-- Details -->
-        <div class="space-y-3">
+        <div 
+          class="space-y-3">
           <div class="flex justify-between border-b pb-2">
-            <Label class="text-gray-800 py-1">Age</Label>
-            <Label class="text-gray-800 py-1">{{ getAge() }} years</Label>
+            <Label class="py-1">Age</Label>
+            <Label class="py-1">{{ getAge() }} years</Label>
           </div>
           <div class="flex justify-between border-b pb-2">
-            <Label class="text-gray-800 py-1">Location</Label>
-            <Label class="text-gray-800 py-1">Jakarta, Indonesia</Label>
+            <Label class="py-1">Location</Label>
+            <Label class="py-1">Jakarta, Indonesia</Label>
           </div>
           <div class="flex justify-between border-b pb-2">
-            <Label class="text-gray-800 py-1">Phone</Label>
-            <Label class="text-gray-800 py-1">(+62) 822 2941 9256</Label>
+            <Label class="py-1">Phone</Label>
+            <Label class="py-1">(+62) 822 2941 9256</Label>
           </div>
           <div class="flex justify-between border-b pb-2">
-            <Label class="text-gray-800 py-1">Mail</Label>
+            <Label class="py-1">Mail</Label>
             <a href="mailto:dimasfr918@gmail.com" class="text-blue-500 hover:underline">
               dimasfr918@gmail.com
             </a>
           </div>
           <div class="flex justify-between items-center border-b pb-2">
-            <Label class="text-gray-800 py-1">Socials</Label>
+            <Label class="py-1">Socials</Label>
             <div class="flex space-x-2">
               <a 
                 href="https://www.linkedin.com/in/dimas-fajar-ramadhan-62107620b/" 
                 target="_blank"
                 class="flex items-center bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700 text-sm">
-                <i class="fab fa-linkedin mr-1" /> LinkedIn
+                <i class="fab fa-linkedin mr-1 mt-1" /> LinkedIn
               </a>
               <a 
                 href="https://github.com/dimasfr" 
                 target="_blank"
-                class="flex items-center bg-gray-800 text-white px-3 py-1 rounded hover:bg-black text-sm">
-                <i class="fab fa-github mr-1" /> Github
+                class="flex items-center bg-gray-900 text-white px-3 py-1 rounded hover:bg-black text-sm">
+                <i class="fab fa-github mr-1 mt-1" /> Github
               </a>
             </div>
           </div>
