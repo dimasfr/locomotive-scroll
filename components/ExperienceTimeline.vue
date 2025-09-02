@@ -3,7 +3,11 @@
     <h2 class="text-3xl font-bold text-center mb-12">My Journey</h2>
     <div class="relative border-l border-gray-300">
 
-      <div v-for="(exp, index) in experiences" :key="index" class="mb-12 ml-8" @click="exp.image ? openModal(exp.image) : null">
+      <div 
+        v-for="(exp, index) in experiences" 
+        :key="index" 
+        :class="['mb-12 ml-8 relative group', exp.image ? 'cursor-pointer' : 'cursor-default']"
+        @click="exp.image ? openModal(exp.image) : null">
         <!-- Icon -->
         <div class="absolute w-10 h-10 flex items-center justify-center bg-blue-500 rounded-full -left-5 shadow">
           <img :src="exp.icon" alt="icon" class="w-6 h-6 object-contain">
@@ -21,19 +25,31 @@
     <!-- Modal -->
     <div
       v-if="showModal"
-      class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70"
+      class="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm"
       @click.self="closeModal"
     >
-      <div class="bg-white dark:bg-gray-900 rounded-lg shadow-lg max-w-2xl w-full p-4 relative">
+      <div
+        class="relative bg-white dark:bg-gray-900 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 max-w-3xl w-[90%] p-6"
+      >
+        <!-- Close Button -->
         <button
-          class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 dark:text-gray-300"
+          class="absolute -top-3 -right-3 bg-red-500 rounded-xl text-white p-2 shadow-md hover:bg-red-600 transition"
           @click="closeModal"
         >
-          ✕
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-square-x-icon lucide-square-x"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></svg>
         </button>
-        <img :src="selectedImage" alt="Bukti pengalaman" class="w-full rounded-lg object-contain">
+
+        <!-- Image inside frame -->
+        <div class="border border-gray-300 dark:border-gray-700 rounded-lg p-2 bg-gray-50 dark:bg-gray-800">
+          <img
+            :src="selectedImage"
+            alt="Bukti pengalaman"
+            class="w-full max-h-[80vh] object-contain rounded-md"
+          >
+        </div>
       </div>
     </div>
+
   </div>
 </template>
 
@@ -59,7 +75,7 @@ const experiences = [
     subtitle: "BPJS Ketenagakerjaan (Via PT. Adi Data Informatika) • South Jakarta • Nov 2023 - Present",
     icon: "/icon/insurance.png",
     description: "Relocating to the capital opened a new chapter in my career, where I joined a major company to develop and maintain the Eprocurement and Vendor Management Systems.",
-    image: "https://picsum.photos/800/400?random=1"
+    image: "/experience/exp-5.jpeg"
   },
   {
     title: "Promoted as Lead Engineer",
@@ -83,11 +99,11 @@ const experiences = [
     image: "/experience/exp-2.jpg"
   },
   {
-    title: "Graduated right before New Normal Era",
+    title: "Graduated right before New Normal Era Started",
     subtitle: "Graduate • Institute Of Technology • Malang • Feb 2020",
     icon: "/icon/education.png",
     description: "Graduated with a Bachelor's degree in Informatic Engineering, specializing in software development and data management.",
-    image: "https://picsum.photos/800/400?random=3"
+    image: ""
   },
   {
     title: "From Campus to Career",
@@ -101,7 +117,7 @@ const experiences = [
     subtitle: "Student • Institute Of Technology • Malang • Sept 2016",
     icon: "/icon/school-bag.png",
     description: "Actively involved in various student organizations and projects, enhancing my skills in software development and teamwork.",
-    image: "https://picsum.photos/800/400?random=3"
+    image: ""
   }
 ]
 </script>
